@@ -1,6 +1,6 @@
 ### Will's Useful Functions for Geomorph ###
 # source('./Default_Package_of_Functions.R') ## unnecessary for any functions in this file, but can be nice to have.
-# library(geomorph) ## unnecessary for any functions in this file, but good if you're actually going to source this on starting a geometric morphometric project.
+# library(geomorph) ## unnecessary for any functions in this file, but good if you're actually going to source this on starting a geometric morphometric project. 
 
 # Generic SShD calculation
 
