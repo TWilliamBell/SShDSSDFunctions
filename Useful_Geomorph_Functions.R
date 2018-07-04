@@ -232,4 +232,4 @@ read.xl.allsheets <- function(filename, tibble = FALSE) {
   x
 }
 
-# clear() - clear() function can be used to clean up your console at the end of sourcing this file if you source the Default_Package_of_Functions.R at the start of this code.
+# clear() ## clear() function can be used to clean up your console at the end of sourcing this file if you source the Default_Package_of_Functions.R at the start of this code.
