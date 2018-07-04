@@ -2,40 +2,6 @@
 source('./Default_Package_of_Functions.R')
 library(geomorph)
 
-cumFact <- function(data,obs,excludeSex = FALSE) {
-  # Make a factor that is a combination of the factors it already has to allow each treatment to be
-  # its own category.
-  # Exclude sex argument requires that the category for sex be named "Sex".
-  factorlogical <- unname(unlist(lapply(data,is.factor))) # Tells me whether a given row is a factor
-  if (isTRUE(excludeSex)) {
-    a <- which(names(data)=="Sex")
-    factorlogical[a] <- FALSE
-  }
-  factors <- array(dim=c(obs,length(data))) # Make an empty array we shall fill
-  for (i in 1:length(factorlogical)) {
-    if (isTRUE(factorlogical[i])) {
-      factors[,i] <- as.character(data[[i]])
-      # Fill spots in the array with the columns in the data that are factors
-    }
-  }
-  cumFactor <- rep(NA_character_,obs) # Make empty vector for our end product to fill
-  for (i in 1:obs) {
-    for (j in 1:length(factorlogical)) {
-      if (!is.na(factors[i,j])) {
-        cumFactor[i] <- paste(cumFactor[i],as.character(factors[i,j])) # Add to every empty spot in the name of all associated factors via repeated concactenations
-      }
-    }
-  }
-  cumFactor <- as.factor(cumFactor)
-}
-
-Cumulative_Factors <- function(data, excludeSex = FALSE) { # Takes in a data frame or list and 
-  # returns all extant combinations of factors as individual factors.
-  factorlogical <- unname(unlist(lapply(data,is.factor)))
-  obsnum <- length(data[[which(factorlogical)[1]]])
-  A <- cumFact(data,obsnum,excludeSex)
-}
-
 # Generic SShD calculation
 
 SShDFunc <- function(Coords, SexVec, Zeroed = F) {
