@@ -1,6 +1,6 @@
 ### Will's Useful Functions for Geomorph ###
-source('./Default_Package_of_Functions.R')
-library(geomorph)
+# source('./Default_Package_of_Functions.R') - unnecessary for any functions in this file
+# library(geomorph) - unnecessary for any functions in this file.
 
 # Generic SShD calculation
 
@@ -232,4 +232,4 @@ read.xl.allsheets <- function(filename, tibble = FALSE) {
   x
 }
 
-clear()
+# clear() - clear() function can be used to clean up your console at the end of sourcing this file if you source the Default_Package_of_Functions.R at the start of this code.
