@@ -37,10 +37,10 @@ SSDFunc <- function(SizeVec, SexVec) {
   MSize <- mean(SizeVec[SexVec == 'm'])
   FSize <- mean(SizeVec[SexVec == 'f'])
   if (FSize >= MSize) {
-    SSD <- (FSize/MSize)-1
+    SSD <- FSize/MSize - 1
   }
   else {
-    SSD <- -((MSize/FSize)-1)
+    SSD <- -(MSize/FSize - 1)
   }
   SSD
 }
