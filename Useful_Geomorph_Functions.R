@@ -1,5 +1,5 @@
 ### Will's Useful Functions for Geomorph ###
-source('./R_Default_Functions/Default_Package_of_Functions.R')
+source('./Default_Package_of_Functions.R')
 library(geomorph)
 
 cumFact <- function(data,obs,excludeSex = FALSE) {
