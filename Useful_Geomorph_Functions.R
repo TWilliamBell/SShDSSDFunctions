@@ -2,6 +2,13 @@
 # source('./Default_Package_of_Functions.R') ## unnecessary for any functions in this file, but can be nice to have.
 # library(geomorph) ## unnecessary for any functions in this file, but good if you're actually going to source this on starting a geometric morphometric project. 
 
+# Calculate euclidean distance
+
+euclidean <- function(vector) { # I know there's a norm function but this one only has one argument,
+  # so it is simpler.  The other one doesn't default to the Euclidean norm.
+  (sum(vector^2))^0.5
+}
+
 # Generic SShD calculation
 
 SShDFunc <- function(Coords, SexVec, Zeroed = F) {
